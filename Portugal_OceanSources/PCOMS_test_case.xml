@@ -16,8 +16,11 @@
 		</postProcessing>
 	</execution>
 	<caseDefinitions>
-		<inputData>
-			<inputDataDir name="hydrodynamic_input_data" type="hydrodynamic"/>
+        <inputData>
+			<inputDataDir name="input_data\hydrodynamic" type="hydrodynamic"/>
+            <inputDataDir name="input_data\wind" type="meteorology"/>
+            <inputDataDir name="input_data\waves" type="waves"/>
+            <inputDataDir name="input_data\water_quality" type="waterQuality"/>
 		</inputData>
 		<simulation>
 			<resolution dp="1500" units_comment="metres (m)"/>
