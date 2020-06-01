@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case>
+	<execution>
+		<parameters>
+			<parameter key="Start" value="2019 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
+			<parameter key="End"   value="2019 11 25 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
+			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
+			<parameter key="OutputWriteTime" value="10800" comment="Time out data (1/Hz)" units_comment="seconds" />
+		</parameters>
+        <outputFields>
+			<file name="data/outputFields.xml"/>
+		</outputFields>        
+		<variableNaming>
+			<file name="data/ncNamesLibrary.xml"/>
+		</variableNaming>
+<!-- 		<postProcessing>
+			<file name="Post_scripts/PostRecipe.xml"/>
+		</postProcessing> -->
+	</execution>
+	<caseDefinitions>
+		<inputData>
+			<inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="hydrodynamic"/>
+		</inputData>
+		<simulation>
+			<!-- <resolution dp="1500" units_comment="metres (m)"/> -->
+            <resolution x="2000" y="2000" z="2" units_comment="metres (m)"/>
+			<timestep dt="1800" units_comment="seconds (s)"/>
+			<BoundingBoxMin x="-12.56" y="34.42" z="-200" units_comment="(deg,deg,m)"/>
+			<BoundingBoxMax x="-5.14" y="44.96" z="10" units_comment="(deg,deg,m)"/>
+		</simulation>
+		<sourceDefinitions>
+			<source>
+				<setsource id="1" name="Burela" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-7.54" y="43.82" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="2" name="Ferrol" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.44" y="43.46" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="3" name="Cee" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.27" y="47.17" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="4" name="Muros" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.16" y="42.69" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="5" name="Arousa" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.03" y="42.46" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="6" name="Pontevedra" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.96" y="42.33" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="7" name="Vigo" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="42.20" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="8" name="Viana" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.91" y="41.63" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="9" name="Porto" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.79" y="41.14" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="10" name="Aveiro" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.84" y="40.64" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="11" name="Figueira_da_Foz" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="40.16" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="12" name="Peniche" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.51" y="39.33" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="13" name="Cascais" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.46" y="38.61" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="14" name="Lisboa" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.33" y="38.61" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="15" name="Setubal" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="38.38" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="16" name="Sesimbra" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.21" y="38.32" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="17" name="Sines" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.98" y="37.89" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="18" name="Sagres" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.03" y="36.93" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="19" name="Portimao" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.49" y="37" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="20" name="Lagos" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.61" y="36.99" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="21" name="Quarteira" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.20" y="36.99" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="22" name="Faro" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-7.88" y="36.88" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="23" name="IslaCanela" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour50.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-7.41" y="37.11" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="24" name="Huelva" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-6.81" y="36.99" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="25" name="SanLucar" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-6.51" y="36.76" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="26" name="Cadiz" />
+				<rateTimeSeries> 
+					<file name="data/dischargeHarbour100.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-6.38" y="36.51" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+		</sourceDefinitions>
+		<constants>
+			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />
+			<BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />
+			<DiffusionCoeff value="0.0" comment="Horizontal diffusion coefficient. Default = 1.0" units_comment="m2/s" />			
+		</constants>
+	</caseDefinitions>
+</case>
