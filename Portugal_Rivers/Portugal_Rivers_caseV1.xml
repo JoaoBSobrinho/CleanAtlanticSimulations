@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case>
+	<execution>
+		<parameters>
+			<parameter key="Start" value="2018 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
+			<parameter key="End"   value="2020 01 01 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
+			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
+			<parameter key="OutputWriteTime" value="10800" comment="Time out data (1/Hz)" units_comment="seconds" />
+		</parameters>
+        <outputFields>
+			<file name="data/outputFields.xml"/>
+		</outputFields>
+		<variableNaming>
+			<file name="data/ncNamesLibrary.xml"/>
+		</variableNaming>
+<!-- 		<postProcessing>
+			<file name="Post_scripts/PostRecipe.xml"/>
+		</postProcessing> -->
+	</execution>
+	<caseDefinitions>
+		<inputData>
+			<inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="hydrodynamic"/>
+		</inputData>
+		<simulation>
+			<!-- <resolution dp="1500" units_comment="metres (m)"/> -->
+            <resolution x="2000" y="2000" z="2" units_comment="metres (m)"/>
+			<timestep dt="1800" units_comment="seconds (s)"/>
+			<BoundingBoxMin x="-12.56" y="34.42" z="-200" units_comment="(deg,deg,m)"/>
+			<BoundingBoxMax x="-5.14" y="44.96" z="10" units_comment="(deg,deg,m)"/>
+		</simulation>
+		<sourceDefinitions>
+			<source>
+				<setsource id="1" name="Ulla" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Ulla.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.03" y="42.46" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="2" name="Minho" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Minho.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="41.85" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="3" name="Douro" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Douro.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.79" y="41.14" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="4" name="Mondego" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Mondego.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="40.11" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="5" name="Tagus" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Tagus.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-9.33" y="38.61" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="6" name="Sado" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Sado.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-8.97" y="38.38" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="7" name="Guadiana" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Guadiana.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-7.41" y="37.11" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+            <source>
+				<setsource id="8" name="Guadalquivir" />
+				<rateTimeSeries> 
+					<file name="data/discharge_Guadalquivir.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<scale value="1" comment="scales the data on the file by this factor (not time)" />
+				</rateTimeSeries>
+				<point x="-6.51" y="36.76" z="0" units_comment="(deg,deg,m)"/>
+			</source>
+		</sourceDefinitions>
+		<constants>
+			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />
+			<BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />
+			<DiffusionCoeff value="0.0" comment="Horizontal diffusion coefficient. Default = 1.0" units_comment="m2/s" />			
+		</constants>
+	</caseDefinitions>
+</case>
