@@ -37,7 +37,13 @@
 					<point x="-12.55" y="34.43" z="0.5" units_comment="(deg,deg,m)"/>
 					<size x="900000" y="1500000" z="1.0" units_comment="metres (m)"/>
 				</box>
-			</source>			
+			</source>	
+		<sourceTypes>
+			<types>
+                <type source="1" type="base" property="" comment="" />
+			</types>
+			<file name="../data/materialTypes.xml"/>
+		</sourceTypes>		
 		</sourceDefinitions>
 		<constants>
 			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />			

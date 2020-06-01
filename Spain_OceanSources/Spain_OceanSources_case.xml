@@ -39,6 +39,12 @@
 				</box>
 			</source>			
 		</sourceDefinitions>
+		<sourceTypes>
+			<types>
+                <type source="1" type="base" property="" comment="" />
+			</types>
+			<file name="../data/materialTypes.xml"/>
+		</sourceTypes>	
 		<constants>
 			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />			
 		</constants>
