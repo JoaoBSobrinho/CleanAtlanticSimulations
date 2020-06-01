@@ -2,13 +2,16 @@
 
 clear
 
+# Read the MOHIDLagrangianPath
+source ../MOHIDLagrangianPath.sh
+
 # "name" and "dirout" are named according to the testcase
-name=Atlantic_OceanSources_case
+name=${PWD##*/}_case
 dirout=${name}_out
 
 # "executables" are renamed and called from their directory
 
-postProcessorDir=../../src/MOHIDLagrangianPostProcessor
+postProcessorDir=${MOHIDLagrangianPath}/src/MOHIDLagrangianPostProcessor
 postProcessor=${postProcessorDir}/MOHIDLagrangianPostProcessor.py
 
 # CODES are executed according the selected parameters of execution in this testcase

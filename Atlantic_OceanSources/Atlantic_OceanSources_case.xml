@@ -9,7 +9,7 @@
 			<parameter key="OutputWriteTime" value="2700" comment="Time out data (1/Hz)" units_comment="seconds" />
 		</parameters>
 		<variableNaming>
-			<file name="data/ncNamesLibrary.xml"/>
+			<file name="../data/ncNamesLibrary.xml"/>
 		</variableNaming>
 		<postProcessing>
 			<file name="Post_scripts/PostRecipe.xml"/>

@@ -2,18 +2,21 @@
 
 clear
 
+# Read the MOHIDLagrangianPath
+source ../MOHIDLagrangianPath.sh
+
 # "name" and "dirout" are named according to the testcase
-name=Spain_Ocean_case
+name=${PWD##*/}_case
 dirout=${name}_out
 
 # "executables" are renamed and called from their directory
-tools=../../build/bin
+tools=${MOHIDLagrangianPath}/build/bin
 mohidlagrangian=${tools}/MOHIDLagrangian
 
-preprocessorDir=../../src/MOHIDLagrangianPreProcessor
+preprocessorDir=${MOHIDLagrangianPath}/src/MOHIDLagrangianPreProcessor
 mohidPreprocessor=${preprocessorDir}/MOHIDLagrangianPreProcessor.py
 
-postProcessorDir=../../src/MOHIDLagrangianPostProcessor
+postProcessorDir=${MOHIDLagrangianPath}/src/MOHIDLagrangianPostProcessor
 mohidPostprocessor=${postProcessorDir}/MOHIDLagrangianPostProcessor.py
 
 # "dirout" is created to store results or it is cleaned if it already exists
