@@ -2,14 +2,24 @@ CleanAtlantic Simulations.
 
 PATH AL MOHID-LAGRANGIAN
 En el fichero MOHIDLagrangianPath.sh introducir el path donde se encuentra el MohidLagrangian.sh
-Enlaces simbólicos – Datos de entrada.
 
+
+
+
+
+
+
+
+
+
+
+###################################### ESTA PARTE YA NO ES NECESARIA################################################
+Enlaces simbólicos – Datos de entrada.
 Los enlaces simbólicos, tal y como su nombre indica son enlaces que permiten acceder al contenido de una carpeta que está en un sitio sin la necesidad de copiar la carpeta en si misma. 
 
 Para crearlos se hace lo siguiente:
 
 ln -s \path\al\directorio\original \path\a\donde\creamos\el\enlace\
-
 
 Imagina que descargamos datos de corrientes y de vientos del océano atlántico y se encuentran en la carpeta:
 
