@@ -9,10 +9,10 @@
 			<parameter key="OutputWriteTime" value="10800" comment="Time out data (1/Hz)" units_comment="seconds" />
 		</parameters>
         <outputFields>
-			<file name="data/outputFields.xml"/>
+			<file name="../data/outputFields.xml"/>
 		</outputFields>
 		<variableNaming>
-			<file name="data/ncNamesLibrary.xml"/>
+			<file name="../data/ncNamesLibrary.xml"/>
 		</variableNaming>
 <!-- 		<postProcessing>
 			<file name="Post_scripts/PostRecipe.xml"/>
@@ -34,12 +34,12 @@
 				<setsource id="1" name="MarineTraffic1" />
 				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
                 <rateTimeSeries> 
-					<file name="data/DischargeMT1.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<file name="source_data/DischargeMT1.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
 				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
 				<polygon>
-					<file name="data/MarineTraffic1.kmz"/>
+					<file name="source_data/MarineTraffic1.kmz"/>
 					<verticalBoundingBox min="-1.0" max="0.0"/>
 				</polygon>
 			</source>
@@ -47,12 +47,12 @@
 				<setsource id="3" name="MarineTraffic3" />
 				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
                 <rateTimeSeries> 
-					<file name="data/DischargeMT3.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<file name="source_data/DischargeMT3.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
 				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
 				<polygon>
-					<file name="data/MarineTraffic3.kmz"/>
+					<file name="source_data/MarineTraffic3.kmz"/>
 					<verticalBoundingBox min="-1.0" max="0.0"/>
 				</polygon>
 			</source>
@@ -60,12 +60,12 @@
 				<setsource id="2" name="MarineTraffic2" />
 				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
                 <rateTimeSeries> 
-					<file name="data/DischargeMT2.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<file name="source_data/DischargeMT2.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
 				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
 				<polygon>
-					<file name="data/MarineTraffic2.kmz"/>
+					<file name="source_data/MarineTraffic2.kmz"/>
 					<verticalBoundingBox min="-1.0" max="0.0"/>
 				</polygon>
 			</source>
@@ -73,12 +73,12 @@
 				<setsource id="4" name="MarineTraffic4" />
 				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
                 <rateTimeSeries> 
-					<file name="data/DischargeMT4.dat" comment="name of csv file with discharge information (time and rate columns)"/>
+					<file name="source_data/DischargeMT4.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
 				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
 				<polygon>
-					<file name="data/MarineTraffic4.kmz"/>
+					<file name="source_data/MarineTraffic4.kmz"/>
 					<verticalBoundingBox min="-1.0" max="0.0"/>
 				</polygon>
 			</source>
