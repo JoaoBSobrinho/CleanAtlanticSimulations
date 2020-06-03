@@ -12,7 +12,7 @@
 			<file name="data/outputFields.xml"/>
 		</outputFields> -->
 		<variableNaming>
-			<file name="../data/NamesLibrary.xml"/>
+			<file name="../data/ncNamesLibrary.xml"/>
 		</variableNaming>
 <!-- 		<postProcessing>
 			<file name="Post_scripts/PostRecipe_Arousa.xml"/>
