@@ -1,0 +1,43 @@
+  __  __  ___  _   _ ___ ____  _                                      _              
+ |  \/  |/ _ \| | | |_ _|  _ \| |    __ _  __ _ _ __ __ _ _ __   __ _(_) __ _ _ __  
+ | |\/| | | | | |_| || || | | | |   / _` |/ _` | __/  _` |  _ \ / _` | |/ _` |  _ \ 
+ | |  | | |_| |  _  || || |_| | |__| (_| | (_| | | | (_| | | | | (_| | | (_| | | | |
+ |_|  |_|\___/|_| |_|___|____/|_____\__,_|\__, |_|  \__,_|_| |_|\__, |_|\__,_|_| |_|
+                                          |___/                 |___/               
+  <MOHIDLagrangian> Copyright (C) 2018 by
+  R. Birjukovs Canelas
+  MARETEC - Research Centre for Marine, Environment and Technology
+  University of Lisbon - IST
+  A. Daniel Garaboa Paz
+  Non-Linear Physics Group - University of Santiago de Compostela, Spain
+
+  MOHID Lagrangian is free software: you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 3 of
+  the License, or (at your option) any later version.
+
+  MOHID Lagrangian is distributed WITHOUT ANY WARRANTY; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE. See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License,
+  along with MOHID Lagrangian. If not, see <http://www.gnu.org/licenses/>.,
+
+
+MOHID Lagrangian v0.2 (R. Birjukovs Canelas - D. Garaboa Paz) (25-09-2019)
+=====================================================================
+2020-06-03 12:19:48 ->Reading .xml file Atlantic_OceanSources_Harbour_case_out/Atlantic_OceanSources_Harbour_case.xml
+2020-06-03 12:19:48 ->Case name is Atlantic_OceanSources_Harbour_case
+2020-06-03 12:19:48 ->Input files index file name is Atlantic_OceanSources_Harbour_case_out/Atlantic_OceanSources_Harbour_case_inputs.xml
+ -->Reading case parameters
+       Integrator scheme is Runge-Kuta 4
+       OMP threads = +32
+       WarmUpTime =  0.000000000000000E+000 s
+       OutputWriteTime = +0.270000000000000E+004 Hz
+       Output file format is VTK
+       Input buffer size is +0.518400000000000E+006 s
+       Start date                = 2013-01-01 00:00:00.000
+       End date                  = 2013-01-11 00:00:00.000
+       Base date (time stamping) = 1950-01-01 00:00:00.000
+       Simulation will run for +0.864000000000000E+006 s
+2020-06-03 12:19:48 [XMLReader::getFile]: no ../data/ncNamesLibrary.xml file, or file is invalid. Stoping
