@@ -82,6 +82,16 @@
 					<verticalBoundingBox min="-1.0" max="0.0"/>
 				</polygon>
 			</source>
+		<sourceTypes>
+			<types>
+			<types>
+                <type source="1" type="base" property="" comment="" />
+                <type source="2" type="base" property="" comment="" />
+                <type source="3" type="base" property="" comment="" />
+                <type source="4" type="base" property="" comment="" />
+			</types>
+			<file name="../data/materialTypes.xml"/>
+		</sourceTypes> 
 		</sourceDefinitions>
 		<constants>
 			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />

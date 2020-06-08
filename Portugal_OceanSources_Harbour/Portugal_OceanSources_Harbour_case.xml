@@ -239,6 +239,38 @@
 				<point x="-6.38" y="36.51" z="0" units_comment="(deg,deg,m)"/>
 			</source>
 		</sourceDefinitions>
+		<sourceTypes>
+			<types>
+			<types>
+                <type source="1" type="base" property="" comment="" />
+                <type source="2" type="base" property="" comment="" />
+                <type source="3" type="base" property="" comment="" />
+                <type source="4" type="base" property="" comment="" />
+                <type source="5" type="base" property="" comment="" />
+                <type source="6" type="base" property="" comment="" />
+                <type source="7" type="base" property="" comment="" />
+                <type source="8" type="base" property="" comment="" />
+                <type source="9" type="base" property="" comment="" />
+                <type source="10" type="base" property="" comment="" />
+                <type source="11" type="base" property="" comment="" />
+                <type source="12" type="base" property="" comment="" />
+                <type source="13" type="base" property="" comment="" />
+                <type source="14" type="base" property="" comment="" />
+                <type source="15" type="base" property="" comment="" />
+                <type source="16" type="base" property="" comment="" />
+                <type source="17" type="base" property="" comment="" />
+                <type source="18" type="base" property="" comment="" />
+                <type source="19" type="base" property="" comment="" />
+                <type source="20" type="base" property="" comment="" />
+                <type source="21" type="base" property="" comment="" />
+                <type source="22" type="base" property="" comment="" />
+                <type source="23" type="base" property="" comment="" />
+                <type source="24" type="base" property="" comment="" />
+                <type source="25" type="base" property="" comment="" />
+                <type source="26" type="base" property="" comment="" />
+			</types>
+			<file name="../data/materialTypes.xml"/>
+		</sourceTypes> 
 		<constants>
 			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />
 			<BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />

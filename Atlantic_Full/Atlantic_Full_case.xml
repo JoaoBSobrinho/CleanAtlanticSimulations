@@ -42,13 +42,12 @@
 				</box>
 			</source>
 		</sourceDefinitions>
-		<!-- <sourceTypes>
+		<sourceTypes>
 			<types>
-				<type source="2" type='plastic' property="bag_1" comment="" />
-				<type source="3" type='paper' property="cardboard_1" comment="" />
+				<type source="1" type="base" property="" comment="" />
 			</types>
-			<file name="data/materialTypes.xml"/>
-		</sourceTypes> -->
+			<file name="../data/materialTypes.xml"/>
+		</sourceTypes>
 		<constants>
 			<BeachingLevel value="-3.0" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />
 			<BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />
