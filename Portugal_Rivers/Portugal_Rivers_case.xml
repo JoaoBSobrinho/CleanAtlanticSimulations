@@ -2,8 +2,8 @@
 <case>
 	<execution>
 		<parameters>
-			<parameter key="Start" value="2018 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
-			<parameter key="End"   value="2020 01 01 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+			<parameter key="Start" value="2020 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
+			<parameter key="End"   value="2020 02 01 00 00 00" comment="Date of final instant" units_comment="ISO format" />
 			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
 			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
 			<parameter key="OutputWriteTime" value="10800" comment="Time out data (1/Hz)" units_comment="seconds" />
@@ -21,12 +21,12 @@
 	<caseDefinitions>
 		<inputData>
 			<inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="hydrodynamic"/>
-            <!--<inputDataDir name="input_data\wind" type="meteorology"/>
-            <inputDataDir name="input_data\waves" type="waves"/>
-            <inputDataDir name="input_data\water_quality" type="waterQuality"/>-->
+            <!--<inputDataDir name="/samba/thredds/thredds/METEO/MM5/PORTUGAL_9KM_1L_1H/FORECAST" type="meteorology"/>
+            <inputDataDir name="input_data\waves" type="waves"/>-->
+            <inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="waterQuality"/>
 		</inputData>
 		<simulation>
-			<resolution dp="1500" units_comment="metres (m)"/> -->
+			<resolution dp="1500" units_comment="metres (m)"/> 
             <!--<resolution x="2000" y="2000" z="2" units_comment="metres (m)"/>-->
 			<timestep dt="1800" units_comment="seconds (s)"/>
 			<BoundingBoxMin x="-12.56" y="34.42" z="-1" units_comment="(deg,deg,m)"/>
@@ -160,7 +160,7 @@
           <point units_comment="(deg,deg,m)" x="-7.41" y="37.11" z="0.0" />
           </source>
         <source>
-            <setsource id="21" name="Guadalquivir_Plastic_heavy" />
+            <setsource id="21" name="Guadalquivir_plastic_heavy" />
           <rate comment="emission rate (Hz)" value="0.03331" />
           <active end="end" start="0" />
           <point units_comment="(deg,deg,m)" x="-6.51" y="36.76" z="0.0" />
@@ -178,6 +178,7 @@
           <point units_comment="(deg,deg,m)" x="-6.51" y="36.76" z="0.0" />
           </source>
         </sourceDefinitions>
+      <sourceTypes>
       <types>
             <type property="heavy" source="0" type="plastic" />
             <type property="light" source="1" type="plastic" />
@@ -200,7 +201,7 @@
             <type property="heavy" source="18" type="plastic" />
             <type property="light" source="19" type="plastic" />
             <type property="medium" source="20" type="paper" />
-            <type property="heavy" source="21" type="Plastic" />
+            <type property="heavy" source="21" type="plastic" />
             <type property="light" source="22" type="plastic" />
             <type property="medium" source="23" type="paper" />
         </types>
