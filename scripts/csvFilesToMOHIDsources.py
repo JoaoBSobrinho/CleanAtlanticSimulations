@@ -10,9 +10,9 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 import argparse
 
-def indent(elem, level=1):
-    i = "\n" + level*"  "
-    j = "\n" + (level-1)*"  "
+def indent(elem, level=2):
+    i = "\n" + level*"   "
+    j = "\n" + (level-1)*"   "
     if len(elem):
         if not elem.text or not elem.text.strip():
             elem.text = i + "  "
