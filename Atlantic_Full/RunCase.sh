@@ -2,6 +2,10 @@
 
 clear
 
+# increase stacksize
+ulimit -s unlimited
+export KMP_STACKSIZE=512M
+
 # Read the MOHIDLagrangianPath
 source ../MOHIDLagrangianPath.sh
 
