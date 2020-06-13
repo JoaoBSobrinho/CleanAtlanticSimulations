@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<case>
-	<execution>
-		<parameters>
-			<parameter key="Start" value="2018 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
-			<parameter key="End"   value="2020 01 01 00 00 00" comment="Date of final instant" units_comment="ISO format" />
-			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
-			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
-			<parameter key="OutputWriteTime" value="2700" comment="Time out data (1/Hz)" units_comment="seconds" />
-		</parameters>
-		<variableNaming>
-			<file name="../data/ncNamesLibrary.xml"/>
-		</variableNaming>
-		<postProcessing>
-			<file name="Post_scripts/PostRecipe.xml"/>
-		</postProcessing>
-	</execution>
-	<caseDefinitions>
-		<inputData>
-			<inputDataDir name="/samba/mwdata/Storage01/CMEMS_IBI/Portugal_Daily/Download" type="hydrodynamic"/>
-<!--            <inputDataDir name="input_data\wind" type="meteorology"/>
-            <inputDataDir name="input_data\waves" type="waves"/>-->
-            <inputDataDir name="/samba/mwdata/Storage01/CMEMS_IBI/Portugal_Daily/Download" type="waterProperties"/>
-		</inputData>
-		<simulation>
-			<resolution dp="1500" units_comment="metres (m)"/>
-			<timestep dt="900.0" units_comment="seconds (s)"/>
-			<BoundingBoxMin x="-12.56" y="34.42" z="-1" units_comment="(deg,deg,m)"/>
-			<BoundingBoxMax x="-5.14" y="44.96" z="1" units_comment="(deg,deg,m)"/>
-		</simulation>
-       <sourceDefinitions>
+<root>
+        <sourceDefinitions>
            <source>
               <setsource id="0" name="Douro_plastic_heavy" />
             <rate comment="emission rate (Hz)" value="0.0001" />
@@ -534,7 +505,6 @@
             <point units_comment="(deg,deg,m)" x="-2.47" y="36.81" z="0.5" />
             </source>
          </sourceDefinitions>
-		<sourceTypes>
       <types>
            <type property="heavy" source="0" type="plastic" />
          <type property="light" source="1" type="plastic" />
@@ -621,10 +591,5 @@
          <type property="light" source="82" type="plastic" />
          <type property="medium" source="83" type="paper" />
          </types>
-			<file name="../data/materialTypes.xml"/>
-		</sourceTypes>	
-		<constants>
-			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />			
-		</constants>
-	</caseDefinitions>
-</case>
+      </root>
+   

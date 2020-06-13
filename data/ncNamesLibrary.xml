@@ -21,12 +21,14 @@
 		<sea_water_temperature name="temp">
 			<variant name="temp" comment="used in MOHID and CMEMS" />
 			<variant name="Temp" />
+            <variant name="thetao" />
 			<variant name="temperature" />
 			<variant name="Temperature" />
 		</sea_water_temperature>
 		<sea_water_salinity name="salt">
 			<variant name="salt" comment="used in MOHID and CMEMS" />
 			<variant name="salinity" />
+            <variant name="so" />
 			<variant name="Salt" />
 			<variant name="Salinity" />
 		</sea_water_salinity>
