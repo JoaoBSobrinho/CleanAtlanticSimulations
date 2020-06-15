@@ -2,8 +2,8 @@
 <case>
 	<execution>
 		<parameters>
-			<parameter key="Start" value="2018 01 01 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
-			<parameter key="End"   value="2020 01 01 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+			<parameter key="Start" value="2019 03 11 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
+			<parameter key="End"   value="2020 06 11 00 00 00" comment="Date of final instant" units_comment="ISO format" />
 			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
 			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
 			<parameter key="OutputWriteTime" value="2700" comment="Time out data (1/Hz)" units_comment="seconds" />
@@ -25,8 +25,8 @@
 		<simulation>
 			<resolution dp="1500" units_comment="metres (m)"/>
 			<timestep dt="900.0" units_comment="seconds (s)"/>
-			<BoundingBoxMin x="-12.56" y="34.42" z="-1" units_comment="(deg,deg,m)"/>
-			<BoundingBoxMax x="-5.14" y="44.96" z="1" units_comment="(deg,deg,m)"/>
+			<BoundingBoxMin x="-12.56" y="34.40" z="-1" units_comment="(deg,deg,m)"/>
+			<BoundingBoxMax x="-1.20" y="45.30" z="1" units_comment="(deg,deg,m)"/>
 		</simulation>
        <sourceDefinitions>
            <source>
@@ -87,19 +87,19 @@
               <setsource id="9" name="Leyre_plastic_heavy" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.88" y="44.61" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.31" y="44.61" z="0.5" />
             </source>
          <source>
               <setsource id="10" name="Leyre_plastic_light" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.88" y="44.61" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.31" y="44.61" z="0.5" />
             </source>
          <source>
               <setsource id="11" name="Leyre_paper_medium" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.88" y="44.61" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.31" y="44.61" z="0.5" />
             </source>
          <source>
               <setsource id="12" name="Minho_plastic_heavy" />
@@ -375,55 +375,55 @@
               <setsource id="57" name="Nervion_plastic_heavy" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-3.08" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-3.08" y="43.39" z="0.5" />
             </source>
          <source>
               <setsource id="58" name="Nervion_plastic_light" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-3.08" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-3.08" y="43.39" z="0.5" />
             </source>
          <source>
               <setsource id="59" name="Nervion_paper_medium" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-3.08" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-3.08" y="43.39" z="0.5" />
             </source>
          <source>
               <setsource id="60" name="Urumea_plastic_heavy" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-2.0" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.99" y="43.35" z="0.5" />
             </source>
          <source>
               <setsource id="61" name="Urumea_plastic_light" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-2.0" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.99" y="43.35" z="0.5" />
             </source>
          <source>
               <setsource id="62" name="Urumea_paper_medium" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-2.0" y="43.48" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.99" y="43.35" z="0.5" />
             </source>
          <source>
               <setsource id="63" name="Bidasoa_plastic_heavy" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.75" y="43.47" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.77" y="43.41" z="0.5" />
             </source>
          <source>
               <setsource id="64" name="Bidasoa_plastic_light" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.75" y="43.47" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.77" y="43.41" z="0.5" />
             </source>
          <source>
               <setsource id="65" name="Bidasoa_paper_medium" />
             <rate comment="emission rate (Hz)" value="0.0001" />
             <active end="end" start="0" />
-            <point units_comment="(deg,deg,m)" x="-1.75" y="43.47" z="0.5" />
+            <point units_comment="(deg,deg,m)" x="-1.77" y="43.41" z="0.5" />
             </source>
          <source>
               <setsource id="66" name="Guadalete_plastic_heavy" />
@@ -533,6 +533,96 @@
             <active end="end" start="0" />
             <point units_comment="(deg,deg,m)" x="-2.47" y="36.81" z="0.5" />
             </source>
+         <source>
+              <setsource id="84" name="Adour_plastic_heavy" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-1.53" y="43.53" z="0.5" />
+            </source>
+         <source>
+              <setsource id="85" name="Adour_plastic_light" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-1.53" y="43.53" z="0.5" />
+            </source>
+         <source>
+              <setsource id="86" name="Adour_paper_medium" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-1.53" y="43.53" z="0.5" />
+            </source>
+         <source>
+              <setsource id="87" name="Tambre_plastic_heavy" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.12" y="42.68" z="0.5" />
+            </source>
+         <source>
+              <setsource id="88" name="Tambre_plastic_light" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.12" y="42.68" z="0.5" />
+            </source>
+         <source>
+              <setsource id="89" name="Tambre_paper_medium" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.12" y="42.68" z="0.5" />
+            </source>
+         <source>
+              <setsource id="90" name="Anllons_plastic_heavy" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.07" y="43.26" z="0.5" />
+            </source>
+         <source>
+              <setsource id="91" name="Anllons_plastic_light" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.07" y="43.26" z="0.5" />
+            </source>
+         <source>
+              <setsource id="92" name="Anllons_paper_medium" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-9.07" y="43.26" z="0.5" />
+            </source>
+         <source>
+              <setsource id="93" name="Mandeo_plastic_heavy" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.39" y="43.45" z="0.5" />
+            </source>
+         <source>
+              <setsource id="94" name="Mandeo_plastic_light" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.39" y="43.45" z="0.5" />
+            </source>
+         <source>
+              <setsource id="95" name="Mandeo_paper_medium" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.39" y="43.45" z="0.5" />
+            </source>
+         <source>
+              <setsource id="96" name="Xubia_plastic_heavy" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.27" y="43.60" z="0.5" />
+            </source>
+         <source>
+              <setsource id="97" name="Xubia_plastic_light" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.27" y="43.60" z="0.5" />
+            </source>
+         <source>
+              <setsource id="98" name="Xubia_paper_medium" />
+            <rate comment="emission rate (Hz)" value="0.0001" />
+            <active end="end" start="0" />
+            <point units_comment="(deg,deg,m)" x="-8.27" y="43.60" z="0.5" />
+            </source>
          </sourceDefinitions>
 		<sourceTypes>
       <types>
@@ -620,6 +710,21 @@
          <type property="heavy" source="81" type="plastic" />
          <type property="light" source="82" type="plastic" />
          <type property="medium" source="83" type="paper" />
+         <type property="heavy" source="84" type="plastic" />
+         <type property="light" source="85" type="plastic" />
+         <type property="medium" source="86" type="paper" />
+         <type property="heavy" source="87" type="plastic" />
+         <type property="light" source="88" type="plastic" />
+         <type property="medium" source="89" type="paper" />
+         <type property="heavy" source="90" type="plastic" />
+         <type property="light" source="91" type="plastic" />
+         <type property="medium" source="92" type="paper" />
+         <type property="heavy" source="93" type="plastic" />
+         <type property="light" source="94" type="plastic" />
+         <type property="medium" source="95" type="paper" />
+         <type property="heavy" source="96" type="plastic" />
+         <type property="light" source="97" type="plastic" />
+         <type property="medium" source="98" type="paper" />
          </types>
 			<file name="../data/materialTypes.xml"/>
 		</sourceTypes>	
