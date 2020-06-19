@@ -9,6 +9,7 @@ Created on Fri Nov 22 12:20:21 2019
 import xml.etree.ElementTree as ET
 import pandas as pd
 import argparse
+import numpy as np
 
 def indent(elem, level=2):
     i = "\n" + level*"   "
@@ -34,6 +35,9 @@ def csvRowToMOHIDDischargeFileSourceElemXML(root,source_id,name,x,y,z,rateFile):
     RateFileElement=ET.SubElement(doc, "rateTimeSeries")
     ET.SubElement(RateFileElement,"file",comment="name of csv file with discharge information (time and rate columns)",name=str(rateFile))
     ET.SubElement(RateFileElement,"scale",comment="scales the data on the file by this factor (not time)",value="1",)
+    x = np.round(x,6)
+    y = np.round(y,6)
+    z = np.round(z,6)
     ET.SubElement(doc, "point",units_comment="(deg,deg,m)", x=str(x),y=str(y),z=str(z))
     return root
 
@@ -43,6 +47,9 @@ def csvRowToMOHIDPointSourceElemXML(root,source_id,name,x,y,z,rate,start=0,end='
     ET.SubElement(doc, "setsource", id=str(source_id),name=name)
     ET.SubElement(doc, "rate", value=str(rate), comment="emission rate (Hz)")
     ET.SubElement(doc, "active", start=str(start), end =str(end))
+    x = np.round(x,6)
+    y = np.round(y,6)
+    z = np.round(z,6)
     ET.SubElement(doc, "point", x=str(x),y=str(y),z=str(z),units_comment="(deg,deg,m)")
     return root
 
