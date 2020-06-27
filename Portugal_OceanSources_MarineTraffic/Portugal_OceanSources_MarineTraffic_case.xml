@@ -14,89 +14,166 @@
 		<variableNaming>
 			<file name="../data/ncNamesLibrary.xml"/>
 		</variableNaming>
-<!-- 		<postProcessing>
+		<postProcessing>
 			<file name="Post_scripts/PostRecipe.xml"/>
-		</postProcessing> -->
+		</postProcessing>
 	</execution>
 	<caseDefinitions>
 		<inputData>
 			<inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="hydrodynamic"/>
+            <!--<inputDataDir name="/samba/thredds/thredds/METEO/MM5/PORTUGAL_9KM_1L_1H/FORECAST" type="meteorology"/>
+            <inputDataDir name="input_data\waves" type="waves"/>-->
+            <inputDataDir name="/samba/thredds/MOHID_WATER/PORTUGAL_0.06DEG_50L_3H/FORECAST" type="waterProperties"/>
 		</inputData>
 		<simulation>
-			<!-- <resolution dp="1500" units_comment="metres (m)"/> -->
-            <resolution x="2000" y="2000" z="2" units_comment="metres (m)"/>
-			<timestep dt="1800" units_comment="seconds (s)"/>
-			<BoundingBoxMin x="-12.56" y="34.42" z="-200" units_comment="(deg,deg,m)"/>
+			<resolution dp="1500" units_comment="metres (m)"/> -->
+            <!--resolution x="2000" y="2000" z="2" units_comment="metres (m)"/-->
+			<timestep dt="3600" units_comment="seconds (s)"/>
+			<BoundingBoxMin x="-12.56" y="34.42" z="-500" units_comment="(deg,deg,m)"/>
 			<BoundingBoxMax x="-5.14" y="44.96" z="10" units_comment="(deg,deg,m)"/>
 		</simulation>
 		<sourceDefinitions>
             <source>
-				<setsource id="1" name="MarineTraffic1" />
-				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
-                <rateTimeSeries> 
-					<file name="source_data/DischargeMT1.dat" comment="name of csv file with discharge information (time and rate columns)"/>
-					<scale value="1" comment="scales the data on the file by this factor (not time)" />
-				</rateTimeSeries>
-				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
+				<setsource id="0" name="MarineTraffic1_plastic_heavy" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
 				<polygon>
 					<file name="source_data/MarineTraffic1.kmz"/>
-					<verticalBoundingBox min="-1.0" max="0.0"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
 				</polygon>
 			</source>
             <source>
-				<setsource id="3" name="MarineTraffic3" />
-				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
-                <rateTimeSeries> 
-					<file name="source_data/DischargeMT3.dat" comment="name of csv file with discharge information (time and rate columns)"/>
-					<scale value="1" comment="scales the data on the file by this factor (not time)" />
-				</rateTimeSeries>
-				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
+				<setsource id="1" name="MarineTraffic1_plastic_light" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
 				<polygon>
-					<file name="source_data/MarineTraffic3.kmz"/>
-					<verticalBoundingBox min="-1.0" max="0.0"/>
+					<file name="source_data/MarineTraffic1.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
 				</polygon>
 			</source>
             <source>
-				<setsource id="2" name="MarineTraffic2" />
-				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
-                <rateTimeSeries> 
-					<file name="source_data/DischargeMT2.dat" comment="name of csv file with discharge information (time and rate columns)"/>
-					<scale value="1" comment="scales the data on the file by this factor (not time)" />
-				</rateTimeSeries>
-				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
+				<setsource id="2" name="MarineTraffic1_paper_medium" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic1.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="3" name="MarineTraffic2_plastic_heavy" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
 				<polygon>
 					<file name="source_data/MarineTraffic2.kmz"/>
-					<verticalBoundingBox min="-1.0" max="0.0"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
 				</polygon>
 			</source>
             <source>
-				<setsource id="4" name="MarineTraffic4" />
-				<resolution x="1000" y="1000" z="1" units_comment="metres (m)"/>
-                <rateTimeSeries> 
-					<file name="source_data/DischargeMT4.dat" comment="name of csv file with discharge information (time and rate columns)"/>
-					<scale value="1" comment="scales the data on the file by this factor (not time)" />
-				</rateTimeSeries>
-				<active start="0" end="end" comment="example: start='12.7' end='end'; start='0.0' end='95' " units_comment="seconds (s)" />
+				<setsource id="4" name="MarineTraffic2_plastic_light" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
 				<polygon>
-					<file name="source_data/MarineTraffic4.kmz"/>
-					<verticalBoundingBox min="-1.0" max="0.0"/>
+					<file name="source_data/MarineTraffic2.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
 				</polygon>
 			</source>
+            <source>
+				<setsource id="5" name="MarineTraffic2_paper_medium" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic2.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="6" name="MarineTraffic3_plastic_heavy" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic3.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="7" name="MarineTraffic3_plastic_light" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic3.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="8" name="MarineTraffic3_paper_medium" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic3.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="9" name="MarineTraffic4_plastic_heavy" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic4.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="10" name="MarineTraffic4_plastic_light" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic4.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+            <source>
+				<setsource id="11" name="MarineTraffic4_paper_medium" />
+				<resolution x="5000" y="20000" z="1" units_comment="metres (m)"/>
+                <rate comment="emission rate (Hz)" value="0.0001"    />
+                <active end="end" start="0" />
+				<polygon>
+					<file name="source_data/MarineTraffic4.kmz"/>
+					<verticalBoundingBox min="-4.0" max="-3.0"/>
+				</polygon>
+			</source>
+        </sourceDefinitions>
 		<sourceTypes>
 			<types>
-			<types>
-                <type source="1" type="base" property="" comment="" />
-                <type source="2" type="base" property="" comment="" />
-                <type source="3" type="base" property="" comment="" />
-                <type source="4" type="base" property="" comment="" />
+              <type property="heavy" source="0" type="plastic" />
+              <type property="light" source="1" type="plastic" />
+              <type property="medium" source="2" type="paper" />
+              <type property="heavy" source="3" type="plastic" />
+              <type property="light" source="4" type="plastic" />
+              <type property="medium" source="5" type="paper" />
+              <type property="heavy" source="6" type="plastic" />
+              <type property="light" source="7" type="plastic" />
+              <type property="medium" source="8" type="paper" />
+              <type property="heavy" source="9" type="plastic" />
+              <type property="light" source="10" type="plastic" />
 			</types>
 			<file name="../data/materialTypes.xml"/>
 		</sourceTypes> 
-		</sourceDefinitions>
 		<constants>
 			<BeachingLevel value="-3.5" comment="Level above which beaching can occur. Default = -3.0" units_comment="m" />
-			<BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />
-			<DiffusionCoeff value="0.0" comment="Horizontal diffusion coefficient. Default = 1.0" units_comment="m2/s" />			
+			<!--BeachingStopProb value="0" comment="Probablity of beaching stopping a tracer. Default = 50%" units_comment="%" />
+			<DiffusionCoeff value="0.0" comment="Horizontal diffusion coefficient. Default = 1.0" units_comment="m2/s" /-->			
 		</constants>
 	</caseDefinitions>
 </case>

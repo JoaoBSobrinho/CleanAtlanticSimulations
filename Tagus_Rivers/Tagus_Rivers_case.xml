@@ -14,9 +14,9 @@
 		<variableNaming>
 			<file name="../data/ncNamesLibrary.xml"/>
 		</variableNaming>
-<!-- 		<postProcessing>
+		<postProcessing>
 			<file name="Post_scripts/PostRecipe.xml"/>
-		</postProcessing> -->
+		</postProcessing>
 	</execution>
         <caseDefinitions>
 		    <inputData>
@@ -39,7 +39,7 @@
 					<file name="data/discharge2019.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
-				<point x="-9.0007" y="38.9295" z="0" units_comment="(deg,deg,m)"/>
+				<point x="-8.9907" y="38.9412" z="0" units_comment="(deg,deg,m)"/>
 			</source>
             <source>
 				<setsource id="1" name="TagusRiver_plastic_light" />
@@ -47,7 +47,7 @@
 					<file name="data/discharge2019.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
-				<point x="-9.0007" y="38.9295" z="0" units_comment="(deg,deg,m)"/>
+				<point x="-8.9907" y="38.9412" z="0" units_comment="(deg,deg,m)"/>
 			</source>
             <source>
 				<setsource id="2" name="TagusRiver_paper_medium" />
@@ -55,7 +55,7 @@
 					<file name="data/discharge2019.dat" comment="name of csv file with discharge information (time and rate columns)"/>
 					<scale value="1" comment="scales the data on the file by this factor (not time)" />
 				</rateTimeSeries>
-				<point x="-9.0007" y="38.9295" z="0" units_comment="(deg,deg,m)"/>
+				<point x="-8.9907" y="38.9412" z="0" units_comment="(deg,deg,m)"/>
 			</source>
 		</sourceDefinitions>
         <sourceTypes>

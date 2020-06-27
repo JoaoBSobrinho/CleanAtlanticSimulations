@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <postProcessing>
 	<time>
-        <step value = "100" />
+        <step value = "4" />
 	</time>
 	<EulerianMeasures>
 		<measures>
@@ -12,14 +12,14 @@
 		</measures>
 		<gridDefinition>
 			<units value= "relative" comments="relative, meters, degrees"/>
-			<resolution x="200" y="200" z="1"/>
+			<resolution x="500" y="500" z="1"/>
 		</gridDefinition>
 	</EulerianMeasures>	
     <plot>
-        <time value= "QS" comments="season, month, year"/>
-        <!--measure key= "cumsum" comments="any implicit method, mean, std, diff, cumsum"/>
-        <measure key= "diff" comments="any implicit method, mean, std, diff, cumsum"/-->
-        <measure key= "mean" comments="any implicit method, mean, std, diff, cumsum"/>
+        <time key= "groupby" value= "time.season" comments="season, month, year"/>
+        <!--measure key= "cumsum" comments="any implicit method, mean, std, diff, cumsum"/-->
+        <measure key= "diff" comments="any implicit method, mean, std, diff, cumsum"/>
+        <measure key= "sum" comments="any implicit method, mean, std, diff, cumsum"/>
         <type value= "imshow" comments="contour,contourf,pcolormesh,imshow"/> 
     </plot>
 </postProcessing>

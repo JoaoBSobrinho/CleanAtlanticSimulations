@@ -3,7 +3,7 @@
 	<execution>
 		<parameters>
 			<parameter key="Start" value="2019 03 11 00 00 00" comment="Date of initial instant" units_comment="space delimited ISO 8601 format up to seconds" />
-			<parameter key="End"   value="2020 06 11 00 00 00" comment="Date of final instant" units_comment="ISO format" />
+			<parameter key="End"   value="2029 05 11 00 00 00" comment="Date of final instant" units_comment="ISO format" />
 			<parameter key="Integrator" value="2" comment="Integration Algorithm 1:Euler, 2:Multi-Step Euler, 3:RK4 (default=1)" />			
 			<parameter key="Threads" value="4" comment="Computation threads for shared memory computation (default=auto)" />			
 			<parameter key="OutputWriteTime" value="2700" comment="Time out data (1/Hz)" units_comment="seconds" />
@@ -26,7 +26,7 @@
 			<resolution dp="1500" units_comment="metres (m)"/>
 			<timestep dt="900.0" units_comment="seconds (s)"/>
 			<BoundingBoxMin x="-12.56" y="34.40" z="-1" units_comment="(deg,deg,m)"/>
-			<BoundingBoxMax x="-1.20" y="45.30" z="1" units_comment="(deg,deg,m)"/>
+			<BoundingBoxMax x="-1.20" y="45.30" z="500" units_comment="(deg,deg,m)"/>
 		</simulation>
        <sourceDefinitions>
            <source>
