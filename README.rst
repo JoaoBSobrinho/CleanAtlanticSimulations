@@ -1,4 +1,7 @@
-CleanAtlantic Simulations.
+CleanAtlantic Simulations - XML template files for MOHID-Lagrangian.
 
-PATH AL MOHID-LAGRANGIAN
-En el fichero MOHIDLagrangianPath.sh introducir el path donde se encuentra el MohidLagrangian.sh
+Instructions
+============
+
+To run with MOHID-Lagrangian, on file MOHIDLagrangianPath.sh replace with the path where is the MOHID-Lagrangian main folder.
+MOHIDLAGRANGIANPATH='\home\user\MOHID-Lagrangian'
