@@ -1,2 +1,2 @@
 #!/bin/bash
-MOHIDLagrangianPath='/home/gfnl143/USC/PROYECTOS/MOHID-Lagrangian/'
+MOHIDLagrangianPath='/home/maretec/LagrangianTool/MOHID-Lagrangian-dev-Dani/MOHID-Lagrangian'

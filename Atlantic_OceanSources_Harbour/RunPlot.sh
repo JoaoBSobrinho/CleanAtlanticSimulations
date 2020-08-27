@@ -9,6 +9,13 @@ source ../MOHIDLagrangianPath.sh
 name=${PWD##*/}_case
 dirout=${name}_out
 
+if [ -z ${dirout+x} ]; 
+then 
+    dirout=${name}_out
+else 
+    dirout=${dirout}${name}_out
+fi
+
 # "executables" are renamed and called from their directory
 
 postProcessorDir=${MOHIDLagrangianPath}/src/MOHIDLagrangianPostProcessor
