@@ -4,14 +4,20 @@ clear
 
 # increase stacksize
 ulimit -s unlimited
-export KMP_STACKSIZE=512M
+export KMP_STACKSIZE=1G
 
 # Read the MOHIDLagrangianPath
 source ../MOHIDLagrangianPath.sh
 
 # "name" and "dirout" are named according to the testcase
 name=${PWD##*/}_case
-dirout=${name}_out
+
+if [ -z ${dirout+x} ]; 
+then 
+    dirout=${name}_out
+else 
+    dirout=${dirout}${name}_out
+fi
 
 # "executables" are renamed and called from their directory
 tools=${MOHIDLagrangianPath}/build/bin
@@ -27,7 +33,7 @@ mohidPostprocessor=${postProcessorDir}/MOHIDLagrangianPostProcessor.py
 if [ -e $dirout ]; then
   rm -f -r $dirout
 fi
-mkdir $dirout
+mkdir -p $dirout
 
 cp ${name}.xml $dirout/
 

@@ -7,7 +7,13 @@ source ../MOHIDLagrangianPath.sh
 
 # "name" and "dirout" are named according to the testcase
 name=${PWD##*/}_case
-dirout=${name}_out
+
+if [ -z ${dirout+x} ]; 
+then 
+    dirout=${name}_out
+else 
+    dirout=${dirout}${name}_out
+fi
 
 # "executables" are renamed and called from their directory
 
