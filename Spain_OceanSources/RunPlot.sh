@@ -7,7 +7,6 @@ source ../MOHIDLagrangianPath.sh
 
 # "name" and "dirout" are named according to the testcase
 name=${PWD##*/}_case
-dirout=${name}_out
 
 if [ -z ${dirout+x} ]; 
 then 
