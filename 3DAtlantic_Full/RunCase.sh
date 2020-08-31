@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 clear
 
 # increase stacksize
@@ -11,7 +11,6 @@ source ../MOHIDLagrangianPath.sh
 
 # "name" and "dirout" are named according to the testcase
 name=${PWD##*/}_case
-#if no dirout is provided, create on local
 
 if [ -z ${dirout+x} ]; 
 then 
