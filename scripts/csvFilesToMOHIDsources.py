@@ -89,8 +89,8 @@ def main():
     1,'name_or_source_1',0,10,0,1,1,1000
     2,'name_or_source_2',10,10,0,1,1,1000
 
-    	<type source="2" type='plastic' property="bag_1" comment="" />
-		<type source="3" type='paper' property="cardboard_1" comment="" />
+        <type source="2" type='plastic' property="bag_1" comment="" />
+        <type source="3" type='paper' property="cardboard_1" comment="" />
     ...
     """
     parser = argparse.ArgumentParser(description='CSV point file to MOHID Sources XML block')
@@ -165,6 +165,6 @@ def main():
 
     indent(xmlMOHIDtree)
     tree = ET.ElementTree(xmlMOHIDtree)
-    tree.write(args.csvFilename.replace('.csv','.xml'))
+    tree.write(args.csvFilename.replace('.csv', '.xml'))
 
 main()

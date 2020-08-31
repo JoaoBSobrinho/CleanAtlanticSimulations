@@ -3,7 +3,7 @@ cls
 
 rem "name" and "dirout" are named according to the case
 
-set name=Portugal_Rivers_case
+set name=Tagus_Rivers_case
 set dirout=%name%_out
 
 rem "executables" are renamed and called from their directory
