@@ -16,6 +16,6 @@
         "uo",
         "vo"
     ],
-    "out-dir": "./CMEMS/Atlantic/Currents_2D/",
+    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/ATLANTIC/Currents_2D/",
     "out-name": "ibe.nc"
 }

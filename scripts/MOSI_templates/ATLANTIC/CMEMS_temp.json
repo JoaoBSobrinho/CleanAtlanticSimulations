@@ -15,6 +15,6 @@
     "variable": [
         "thetao",
     ],
-    "out-dir": "./CMEMS/Atlantic/WaterProperties/thetao",
+    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/ATLANTIC/WaterProperties/thetao",
     "out-name": "ibe.nc"
 }

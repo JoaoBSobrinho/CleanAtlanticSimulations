@@ -16,6 +16,6 @@
         "VSDX",
         "VSDY"
     ],
-    "out-dir": "./CMEMS/Ibi/Waves/",
+    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/ATLANTIC/IBI/Waves/",
     "out-name": "ibe.nc"
 }

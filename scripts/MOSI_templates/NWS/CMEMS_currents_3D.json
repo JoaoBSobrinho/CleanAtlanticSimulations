@@ -16,6 +16,6 @@
         "uo",
         "vo"
     ],
-    "out-dir": "./CMEMS/NorthWestShelf/Currents_3D/",
+    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/NWS/Currents_3D/",
     "out-name": "ibe.nc"
 }
