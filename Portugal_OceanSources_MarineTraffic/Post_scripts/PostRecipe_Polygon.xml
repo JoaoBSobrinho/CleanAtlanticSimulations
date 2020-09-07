@@ -11,7 +11,7 @@
 			</filters>
 		</measures>
 		<polygonDefinition>
-			<file name= "./../../data/MRU/MarineReportingUnits_MSFD_2018_v2.shp" comments="relative, meters, degrees"/>
+			<file name= "./../data/MRU/MarineReportingUnits_MSFD_2018_v2.shp" comments="relative, meters, degrees"/>
 		</polygonDefinition>
 	</EulerianMeasures>	
     <plot>

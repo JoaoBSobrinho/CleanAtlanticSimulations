@@ -11,12 +11,12 @@
 			</filters>
 		</measures>
 		<polygonDefinition>
-			<file name= "./../../data/MRU/MarineReportingUnits_MSFD_2018_v2.shp" comments="relative, meters, degrees"/>
+			<file name= "./../data/MRU/MarineReportingUnits_MSFD_2018_v2.shp" comments="relative, meters, degrees"/>
 		</polygonDefinition>
 	</EulerianMeasures>	
     <plot>
         <time key= "" value= "all" comments="season, month, year"/>
-        <measure key="sum" comments="any implicit method, mean, std, diff, cumsum"/>
+        <measure key="mean" comments="any implicit method, mean, std, diff, cumsum"/>
         <type value="imshow" comments="contour,contourf,pcolormesh,imshow"/> 
     </plot>
 </postProcessing>
