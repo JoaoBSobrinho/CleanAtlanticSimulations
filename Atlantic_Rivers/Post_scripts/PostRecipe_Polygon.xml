@@ -11,7 +11,7 @@
 			</filters>
 		</measures>
 		<polygonDefinition>
-			<file name="./../../data/OSPAR_Subregions/OSPAR_subregions_20160418_3857.shp" comments="shape file path"/>
+			<file name="./../data/OSPAR_Subregions/OSPAR_subregions_20160418_3857.shp" comments="shape file path"/>
 		</polygonDefinition>
 	</EulerianMeasures>	
     <plot>
