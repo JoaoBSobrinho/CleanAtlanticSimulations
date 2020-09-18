@@ -14,8 +14,8 @@ function replace_pwd_user(){
         echo '-> Replacing in: ' $1
 		user_replace='"user":"'$user_cmems'",'
 		pass_replace='"pwd":"'$pass_cmems'",'
-		sed -i '/"user": /c\\    '$user_replace $1
-		sed -i '/"pwd": /c\\    '$pass_replace $1
+		sed -i '/"user":/c\\    '$user_replace $1
+		sed -i '/"pwd":/c\\    '$pass_replace $1
 		
 	fi
 }
