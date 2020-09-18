@@ -1,8 +1,8 @@
 {
     "service-id": "reanalysis-era5-single-levels",
     "product-id": "reanalysis",
-    "date-min": "2018-01-01 12:00:00",
-    "date-max": "2020-01-01 12:00:00",
+    "date-min": "2018-09-16 00:00:00",
+    "date-max": "2020-09-16 23:00:00",
     "latitude-min": 26.00, 
     "latitude-max": 56.00, 
     "longitude-min": -19.00,
