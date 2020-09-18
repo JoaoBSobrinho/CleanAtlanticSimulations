@@ -16,6 +16,6 @@
         "so",
         "thetao"
     ],
-    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/ATLANTIC/waterProperties/",
+    "out-dir": "/samba/thredds/CleanAtlantic_Hilda/IBI/waterProperties/",
     "out-name": "ibe.nc"
 }
